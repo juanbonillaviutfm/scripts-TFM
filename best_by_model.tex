@@ -1,0 +1,22 @@
+
+\begin{table}[ht]
+\centering
+\begin{threeparttable}
+\caption{Mejor combinación por modelo (TEST)}
+\label{tab:best_by_model}
+\begin{tabular}{@{} l l l S S S S S S @{}}
+\toprule
+model & dataset & combo & n_features & test_accuracy & test_recall_macro & test_precision_macro & test_f1_macro & test_auc \\
+\midrule
+KNN & Base_em & DEMOS+EMB_full & 21 & \textbf{0.7390} & 0.6870 & \textbf{0.7178} & 0.6952 & 0.7972 \\
+LogReg & Base_em & DEMOS+EMB_full & 21 & 0.7034 & 0.7164 & 0.6981 & 0.6950 & 0.7945 \\
+RF & Base_em & DEMOS+EMB_top8 & 14 & 0.7052 & 0.7210 & 0.7020 & \textbf{0.6977} & 0.7987 \\
+XGB & Base_em & DEMOS+EMB_top8 & 14 & 0.6991 & \textbf{0.7217} & 0.7027 & 0.6935 & \textbf{0.7999} \\
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}\footnotesize
+\item Métricas en TEST. AUC es OvR si aplica; "--" indica no disponible.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

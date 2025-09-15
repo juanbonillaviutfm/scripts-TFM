@@ -1,0 +1,28 @@
+
+\begin{table}[ht]
+\centering
+\begin{threeparttable}
+\caption{Top 10 global en TEST (ordenado por Recall\_macro y F1\_macro)}
+\label{tab:global_top10}
+\begin{tabular}{@{} l l l S S S S S S @{}}
+\toprule
+model & dataset & combo & n_features & test_accuracy & test_recall_macro & test_precision_macro & test_f1_macro & test_auc \\
+\midrule
+XGB & Base_em & DEMOS+EMB_top8 & 14 & 0.6991 & \textbf{0.7217} & \textbf{0.7027} & 0.6935 & \textbf{0.7999} \\
+XGB & Base_em & DEMOS+EMB_full & 21 & 0.6998 & 0.7215 & 0.7025 & 0.6939 & 0.7998 \\
+RF & Base_em & DEMOS+EMB_top8 & 14 & 0.7052 & 0.7210 & 0.7020 & 0.6977 & 0.7987 \\
+XGB & Base_famd & DEMOS+FAMD_full & 11 & 0.6970 & 0.7209 & 0.7021 & 0.6917 & 0.7961 \\
+RF & Base_em & DEMOS+EMB_full & 21 & 0.7050 & 0.7208 & 0.7019 & 0.6974 & 0.7983 \\
+RF & Base_famd & DEMOS+FAMD_full & 11 & \textbf{0.7061} & 0.7202 & 0.7014 & \textbf{0.6980} & 0.7963 \\
+RF & Base_famd & FAMD_top4 & 4 & 0.6920 & 0.7196 & 0.7014 & 0.6877 & 0.7915 \\
+RF & Base_famd & FAMD_top3 & 3 & 0.6922 & 0.7193 & 0.7011 & 0.6878 & 0.7915 \\
+RF & Base_famd & FAMD_full & 5 & 0.6916 & 0.7193 & 0.7011 & 0.6873 & 0.7917 \\
+RF & Base_famd & FAMD_top5 & 5 & 0.6916 & 0.7193 & 0.7011 & 0.6873 & 0.7917 \\
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}\footnotesize
+\item Métricas en TEST. AUC es OvR si aplica; "--" indica no disponible.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

@@ -1,0 +1,23 @@
+
+\begin{table}[ht]
+\centering
+\begin{threeparttable}
+\caption{Top 5 — Random Forest (TEST)}
+\label{tab:rf_top5}
+\begin{tabular}{@{} l l l S S S S S S @{}}
+\toprule
+model & dataset & combo & n_features & test_accuracy & test_recall_macro & test_precision_macro & test_f1_macro & test_auc \\
+\midrule
+RF & Base_em & DEMOS+EMB_top8 & 14 & 0.7052 & \textbf{0.7210} & \textbf{0.7020} & 0.6977 & \textbf{0.7987} \\
+RF & Base_em & DEMOS+EMB_full & 21 & 0.7050 & 0.7208 & 0.7019 & 0.6974 & 0.7983 \\
+RF & Base_famd & DEMOS+FAMD_full & 11 & \textbf{0.7061} & 0.7202 & 0.7014 & \textbf{0.6980} & 0.7963 \\
+RF & Base_famd & FAMD_top4 & 4 & 0.6920 & 0.7196 & 0.7014 & 0.6877 & 0.7915 \\
+RF & Base_famd & FAMD_top3 & 3 & 0.6922 & 0.7193 & 0.7011 & 0.6878 & 0.7915 \\
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}\footnotesize
+\item Métricas en TEST. AUC es OvR si aplica; "--" indica no disponible.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
